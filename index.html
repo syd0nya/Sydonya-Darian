@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -12,6 +13,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+
 <style>
 
 *{
@@ -20,29 +22,47 @@ padding:0;
 box-sizing:border-box;
 }
 
+
 html{
 scroll-behavior:smooth;
 }
 
+
 body{
+
 font-family:'Inter',sans-serif;
+
 background:#f5f9ff;
+
 color:#17335d;
+
 }
+
+
+
+/* NAVIGATION */
 
 
 nav{
 
 position:fixed;
+
 top:0;
+
+left:0;
+
 width:100%;
+
 padding:20px 8%;
 
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
-background:rgba(255,255,255,.75);
+background:rgba(255,255,255,.80);
+
 backdrop-filter:blur(20px);
 
 z-index:1000;
@@ -50,74 +70,108 @@ z-index:1000;
 }
 
 
+
 nav h2{
 
 font-family:'Cormorant Garamond',serif;
-font-size:34px;
+
+font-size:36px;
+
+color:#17335d;
 
 }
+
 
 
 nav ul{
 
 display:flex;
-gap:30px;
+
+gap:25px;
+
 list-style:none;
 
 }
 
 
+
 nav a{
 
 text-decoration:none;
+
 color:#17335d;
+
 font-size:14px;
+
 letter-spacing:1px;
 
 }
 
 
+
+
 /* HERO */
+
 
 .hero{
 
 height:100vh;
 
+
 background:
+
 linear-gradient(
+
 rgba(20,50,90,.25),
+
 rgba(20,50,90,.25)
+
 ),
-url("images/hero.jpg")
+
+url("20251126_160039_Original.jpg")
+
 center/cover;
 
 
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
 text-align:center;
 
 padding:30px;
 
+
 }
+
+
 
 
 .hero-content{
 
 color:white;
 
+animation:fadeIn 2s ease;
+
 }
+
 
 
 .hero h3{
 
 font-size:15px;
+
 letter-spacing:6px;
+
 font-weight:300;
+
 text-transform:uppercase;
 
 }
+
 
 
 .hero h1{
@@ -133,6 +187,7 @@ margin:30px 0;
 }
 
 
+
 .hero p{
 
 font-size:22px;
@@ -142,6 +197,7 @@ letter-spacing:2px;
 margin-bottom:35px;
 
 }
+
 
 
 .button{
@@ -165,6 +221,7 @@ transition:.3s;
 }
 
 
+
 .button:hover{
 
 transform:translateY(-5px);
@@ -172,13 +229,18 @@ transform:translateY(-5px);
 }
 
 
-/* SECTIONS */
+
+
+
+/* GENERAL SECTIONS */
+
 
 section{
 
 padding:100px 10%;
 
 }
+
 
 
 .title{
@@ -194,6 +256,7 @@ margin-bottom:20px;
 }
 
 
+
 .subtitle{
 
 text-align:center;
@@ -207,6 +270,8 @@ line-height:1.8;
 color:#496589;
 
 }
+
+
 
 
 /* COUNTDOWN */
@@ -225,6 +290,7 @@ margin-top:50px;
 flex-wrap:wrap;
 
 }
+
 
 
 .box{
@@ -246,21 +312,26 @@ align-items:center;
 border-radius:50%;
 
 box-shadow:
+
 0 20px 50px rgba(0,0,0,.08);
 
 }
 
 
+
 .box h2{
 
-font-size:40px;
-
 font-family:'Cormorant Garamond',serif;
+
+font-size:40px;
 
 }
 
 
-/* CARDS */
+
+
+
+/* DETAILS CARDS */
 
 
 .cards{
@@ -268,6 +339,7 @@ font-family:'Cormorant Garamond',serif;
 display:grid;
 
 grid-template-columns:
+
 repeat(auto-fit,minmax(250px,1fr));
 
 gap:30px;
@@ -275,6 +347,7 @@ gap:30px;
 margin-top:60px;
 
 }
+
 
 
 .card{
@@ -286,6 +359,7 @@ padding:40px;
 border-radius:25px;
 
 box-shadow:
+
 0 20px 50px rgba(0,0,0,.08);
 
 transition:.4s;
@@ -293,11 +367,13 @@ transition:.4s;
 }
 
 
+
 .card:hover{
 
 transform:translateY(-10px);
 
 }
+
 
 
 .card h4{
@@ -311,6 +387,9 @@ margin-bottom:20px;
 }
 
 
+
+
+
 /* GALLERY */
 
 
@@ -321,38 +400,41 @@ background:#eef6ff;
 }
 
 
+
 .gallery-grid{
 
 display:grid;
 
 grid-template-columns:
+
 repeat(auto-fit,minmax(250px,1fr));
 
-gap:20px;
+gap:25px;
 
 margin-top:50px;
 
 }
 
 
+
 .gallery-grid img{
 
 width:100%;
 
-height:350px;
+height:380px;
 
 object-fit:cover;
 
 border-radius:20px;
 
 box-shadow:
-0 15px 40px rgba(0,0,0,.12);
 
-cursor:pointer;
+0 15px 40px rgba(0,0,0,.12);
 
 transition:.4s;
 
 }
+
 
 
 .gallery-grid img:hover{
@@ -362,43 +444,6 @@ transform:scale(1.03);
 }
 
 
-/* LIGHTBOX */
-
-.lightbox{
-
-display:none;
-
-position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,.9);
-
-justify-content:center;
-
-align-items:center;
-
-z-index:9999;
-
-}
-
-
-.lightbox img{
-
-max-width:90%;
-
-max-height:90%;
-
-border-radius:20px;
-
-}
-
-
-.lightbox.active{
-
-display:flex;
-
-}
 
 
 /* HONEYMOON */
@@ -409,6 +454,7 @@ display:flex;
 background:#dcebff;
 
 }
+
 
 
 .progress{
@@ -428,6 +474,7 @@ margin:30px auto;
 }
 
 
+
 .bar{
 
 height:100%;
@@ -435,13 +482,19 @@ height:100%;
 width:0%;
 
 background:
+
 linear-gradient(
+
 90deg,
+
 #8cc5ff,
+
 #1d5dc9
+
 );
 
 }
+
 
 
 .payment{
@@ -459,6 +512,7 @@ margin-top:40px;
 }
 
 
+
 .payment div{
 
 background:white;
@@ -472,9 +526,12 @@ border-radius:20px;
 text-align:center;
 
 box-shadow:
+
 0 15px 35px rgba(0,0,0,.08);
 
 }
+
+
 </style>
 
 </head>
@@ -502,11 +559,17 @@ box-shadow:
 
 
 
+
 <header class="hero">
+
 
 <div class="hero-content">
 
-<h3>You're Invited To Celebrate</h3>
+
+<h3>
+You're Invited To Celebrate
+</h3>
+
 
 <h1>
 Sydonya Miller
@@ -516,7 +579,10 @@ Sydonya Miller
 Darian Coke
 </h1>
 
-<p>Monday • July 27, 2026</p>
+
+<p>
+Monday • July 27, 2026
+</p>
 
 
 <a class="button" href="#rsvp">
@@ -526,12 +592,16 @@ RSVP
 
 </div>
 
+
 </header>
 
 
 
 
+
+
 <section>
+
 
 <h2 class="title">
 Countdown
@@ -542,32 +612,68 @@ Countdown
 
 
 <div class="box">
-<h2 id="days">0</h2>
-<p>Days</p>
+
+<h2 id="days">
+0
+</h2>
+
+<p>
+Days
+</p>
+
 </div>
+
 
 
 <div class="box">
-<h2 id="hours">0</h2>
-<p>Hours</p>
+
+<h2 id="hours">
+0
+</h2>
+
+<p>
+Hours
+</p>
+
 </div>
+
 
 
 <div class="box">
-<h2 id="minutes">0</h2>
-<p>Minutes</p>
+
+<h2 id="minutes">
+0
+</h2>
+
+<p>
+Minutes
+</p>
+
 </div>
+
 
 
 <div class="box">
-<h2 id="seconds">0</h2>
-<p>Seconds</p>
+
+<h2 id="seconds">
+0
+</h2>
+
+<p>
+Seconds
+</p>
+
 </div>
 
 
+
 </div>
+
 
 </section>
+
+
+
 
 
 
@@ -588,6 +694,7 @@ Wedding Details
 
 <div class="card">
 
+
 <h4>
 Ceremony
 </h4>
@@ -599,21 +706,27 @@ Hatfield Wesleyan Holiness Church
 </strong>
 </p>
 
+
 <br>
+
 
 <p>
 Guest Arrival
 </p>
 
+
 <p>
 10:30 AM
 </p>
 
+
 <br>
+
 
 <p>
 Ceremony Begins
 </p>
+
 
 <p>
 11:00 AM
@@ -626,7 +739,10 @@ Ceremony Begins
 
 
 
+
+
 <div class="card">
+
 
 <h4>
 Dress Code
@@ -637,7 +753,9 @@ Dress Code
 Shades of Blue
 </p>
 
+
 <br>
+
 
 <p>
 Please arrive early to be seated before the ceremony begins.
@@ -650,7 +768,11 @@ Please arrive early to be seated before the ceremony begins.
 
 
 
+
+
+
 <div class="card">
+
 
 <h4>
 Reception
@@ -696,6 +818,8 @@ Coming Soon
 
 
 
+
+
 <section id="gallery" class="gallery">
 
 
@@ -704,11 +828,11 @@ Our Gallery
 </h2>
 
 
+
 <p class="subtitle">
-
 A collection of moments leading to our forever.
-
 </p>
+
 
 
 
@@ -716,16 +840,16 @@ A collection of moments leading to our forever.
 
 
 
-
 <img src="20251126_160039_Original.jpg">
+
 
 <img src="20251126_161247_Original.jpg">
 
 
 
 
-
 </div>
+
 
 
 </section>
@@ -739,6 +863,7 @@ A collection of moments leading to our forever.
 
 
 <section class="honeymoon" id="honeymoon">
+
 
 
 <h2 class="title">
@@ -755,6 +880,7 @@ Your love and presence are the greatest gifts we could ask for. If you would lik
 
 
 
+
 <h2 style="text-align:center;margin-top:40px;">
 Goal: $3,500
 </h2>
@@ -762,11 +888,15 @@ Goal: $3,500
 
 
 
+
 <div class="progress">
+
 
 <div class="bar"></div>
 
+
 </div>
+
 
 
 
@@ -775,19 +905,26 @@ Goal: $3,500
 <div class="payment">
 
 
+
 <div>
 
 <h3>
 Zelle
 </h3>
 
+
 <br>
+
 
 <p>
 4075758897
 </p>
 
+
 </div>
+
+
+
 
 
 
@@ -797,13 +934,18 @@ Zelle
 Venmo
 </h3>
 
+
 <br>
+
 
 <p>
 @sydonya
 </p>
 
+
 </div>
+
+
 
 
 
@@ -814,16 +956,21 @@ Venmo
 Cash App
 </h3>
 
+
 <br>
+
 
 <p>
 $syd0nya
 </p>
 
+
 </div>
 
 
+
 </div>
+
 
 
 </section>
@@ -848,6 +995,10 @@ RSVP
 
 We can't wait to celebrate with you!
 
+<br>
+
+Please RSVP as soon as possible.
+
 </p>
 
 
@@ -856,13 +1007,16 @@ We can't wait to celebrate with you!
 <div style="text-align:center;margin-top:40px;">
 
 
+
 <a class="button"
 
 href="https://forms.gle/BQrRM8GBibEH9Hwb7"
 
 target="_blank">
 
+
 Complete RSVP
+
 
 </a>
 
@@ -870,14 +1024,11 @@ Complete RSVP
 </div>
 
 
+
 </section>
 
 
-
-
-
-
-
+   id="v0x8bd"
 <footer>
 
 
@@ -905,8 +1056,6 @@ July 27, 2026
 
 
 
-
-
 <script>
 
 
@@ -918,7 +1067,7 @@ const weddingDate = new Date(
 
 
 
-setInterval(()=>{
+function updateCountdown(){
 
 
 const now = new Date().getTime();
@@ -928,69 +1077,206 @@ const distance = weddingDate - now;
 
 
 
+if(distance < 0){
+
+document.getElementById("days").innerHTML = 0;
+
+document.getElementById("hours").innerHTML = 0;
+
+document.getElementById("minutes").innerHTML = 0;
+
+document.getElementById("seconds").innerHTML = 0;
+
+return;
+
+}
+
+
+
 document.getElementById("days").innerHTML =
-Math.floor(distance/(1000*60*60*24));
+Math.floor(
+distance / (1000 * 60 * 60 * 24)
+);
 
 
 
 document.getElementById("hours").innerHTML =
 Math.floor(
-(distance%(1000*60*60*24))
+(distance % (1000 * 60 * 60 * 24))
 /
-(1000*60*60)
+(1000 * 60 * 60)
 );
 
 
 
 document.getElementById("minutes").innerHTML =
 Math.floor(
-(distance%(1000*60*60))
+(distance % (1000 * 60 * 60))
 /
-(1000*60)
+(1000 * 60)
 );
 
 
 
 document.getElementById("seconds").innerHTML =
 Math.floor(
-(distance%(1000*60))
+(distance % (1000 * 60))
 /
 1000
 );
 
 
 
-},1000);
-
-
-
-
-
-
-// PHOTO LIGHTBOX
-
-
-function openImage(src){
-
-document.getElementById("lightboxImg").src = src;
-
-document.getElementById("lightbox")
-.classList.add("active");
-
 }
 
 
 
-function closeImage(){
+updateCountdown();
 
-document.getElementById("lightbox")
-.classList.remove("active");
 
-}
+setInterval(updateCountdown,1000);
+
 
 
 
 </script>
+
+
+
+
+
+<style>
+
+
+footer{
+
+padding:50px;
+
+text-align:center;
+
+background:#17335d;
+
+color:white;
+
+}
+
+
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+nav{
+
+padding:18px 5%;
+
+}
+
+
+
+nav h2{
+
+font-size:28px;
+
+}
+
+
+
+nav ul{
+
+gap:12px;
+
+}
+
+
+
+nav a{
+
+font-size:11px;
+
+}
+
+
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+
+
+.hero h3{
+
+font-size:12px;
+
+letter-spacing:4px;
+
+}
+
+
+
+section{
+
+padding:75px 6%;
+
+}
+
+
+
+.title{
+
+font-size:42px;
+
+}
+
+
+
+.gallery-grid img{
+
+height:300px;
+
+}
+
+
+
+.payment div{
+
+width:100%;
+
+}
+
+
+
+}
+
+
+
+</style>
+
 
 
 </body>
