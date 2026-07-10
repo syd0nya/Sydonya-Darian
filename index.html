@@ -531,6 +531,147 @@ box-shadow:
 
 }
 
+   /* SCHEDULE */
+
+.schedule-container{
+
+max-width:800px;
+
+margin:60px auto 0;
+
+position:relative;
+
+}
+
+
+.schedule-container:before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+height:100%;
+
+width:2px;
+
+background:#b7d7ff;
+
+transform:translateX(-50%);
+
+}
+
+
+
+.schedule-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:50px;
+
+position:relative;
+
+}
+
+
+
+.time{
+
+background:#17335d;
+
+color:white;
+
+padding:18px 25px;
+
+border-radius:50px;
+
+font-weight:600;
+
+width:150px;
+
+text-align:center;
+
+}
+
+
+
+.event{
+
+background:white;
+
+padding:30px;
+
+width:55%;
+
+border-radius:20px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+}
+
+
+
+.event h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.event p{
+
+line-height:1.7;
+
+}
+
+
+
+@media(max-width:768px){
+
+.schedule-container:before{
+
+left:20px;
+
+}
+
+
+.schedule-item{
+
+display:block;
+
+padding-left:50px;
+
+}
+
+
+.time{
+
+margin-bottom:20px;
+
+}
+
+
+.event{
+
+width:100%;
+
+}
+
+}
+
 
 </style>
 
@@ -675,7 +816,7 @@ Seconds
 <section id="schedule">
 
 <h2 class="title">
-Wedding Schedule
+Schedule
 </h2>
 
 <p class="subtitle">
